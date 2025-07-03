@@ -6,7 +6,8 @@ import "dotenv/config";
 const TRANSFER_TOPIC = keccak256(
   toUtf8Bytes("Transfer(address,address,uint256)"),
 );
-const ALCHEMY_KEY = process.env.ALCHEMY_API_KEY;
+// Get API key from environment variable, with fallback for development
+const ALCHEMY_KEY = process.env.ALCHEMY_API_KEY || process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
 const USDT_CONTRACT = "0xdac17f958d2ee523a2206206994597c13d831ec7";
 
 const settings = {
