@@ -1,12 +1,12 @@
 import { Alchemy, Log, Network } from "alchemy-sdk";
 import { keccak256 } from "@ethersproject/keccak256";
 import { toUtf8Bytes } from "@ethersproject/strings";
-import "dotenv/config";
 
 const TRANSFER_TOPIC = keccak256(
   toUtf8Bytes("Transfer(address,address,uint256)"),
 );
-const ALCHEMY_KEY = process.env.ALCHEMY_API_KEY;
+//@ts-ignore
+const ALCHEMY_KEY = import.meta.env.VITE_ALCHEMY_API_KEY;
 const USDT_CONTRACT = "0xdac17f958d2ee523a2206206994597c13d831ec7";
 debugger;
 const settings = {

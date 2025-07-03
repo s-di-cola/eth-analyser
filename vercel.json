@@ -1,4 +1,0 @@
-{
-  "buildCommand": "npm install @parcel/rust-linux-x64-gnu && npm run build",
-  "outputDirectory": "dist"
-}
