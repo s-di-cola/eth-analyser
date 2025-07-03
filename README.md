@@ -58,7 +58,7 @@ All charts are synchronized and update in real-time as new blocks are mined, wit
 3. Set up your environment variables:
    Create a `.env` file in the project root and add your Alchemy API key:
    ```
-   ALCHEMY_API_KEY=your_api_key_here
+   VITE_ALCHEMY_API_KEY=your_api_key_here
    ```
 
 ### Development
@@ -81,15 +81,12 @@ The output will be in the `dist` directory.
 
 ### Deployment
 
-This project is configured for deployment on Vercel:
-
-1. Push your code to a GitHub repository
-2. Connect your repository to Vercel
-3. Vercel will automatically deploy your application using the configuration in `vercel.json`
+This project is configured for deployment on Vercel: `https://vercel.com/s-di-colas-projects/eth-analyser/` and will be automatically deployed on push to the `main` branch.
+It is publicly accessible at: `https://eth-analyser.vercel.app/`
 
 You can also deploy manually using the Vercel CLI:
 ```bash
-vercel
+npx vercel
 ```
 
 ## Contributing
