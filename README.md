@@ -1,41 +1,101 @@
-# ERC20 Token Analytics and Ethereum Gas Metrics Visualizer
+# Ethereum USDT Analytics Dashboard
 
-This project provides real-time visualizations of ERC20 token transfers and Ethereum gas metrics using ApexCharts. It
-displays three synchronized charts that update as new blocks are mined on the Ethereum network.
+![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=Ethereum&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Parcel](https://img.shields.io/badge/Parcel-F7B93E?style=for-the-badge&logo=parcel&logoColor=black)
+
+A real-time dashboard for monitoring USDT transactions on the Ethereum blockchain. This application provides dynamic visualizations of token transfers, gas metrics, and network activity using ApexCharts.
 
 ## Features
 
-1. **ERC20 Token Transfer Volume Chart**
+### 1. **USDT Transfer Volume Chart**
+- Monitors USDT token transfers in real-time
+- Visualizes transaction volume per block
+- Tracks significant token movements on the Ethereum network
 
-- Monitors logs of a specified ERC20 token address.
-- Plots the total volume of transfers for each block.
-- Uses a bar chart to represent the number of transactions.
+### 2. **Block Base Fee Chart**
+- Displays the BASEFEE for each block
+- Helps visualize gas price dynamics introduced by EIP-1559
+- Provides insights into current network pricing
 
-2. **Block Base Fee Chart**
+### 3. **Gas Usage Ratio Chart**
+- Shows the ratio of gasUsed over gasLimit as a percentage
+- Helps understand network congestion levels
+- Correlates with gas price fluctuations
 
-- Displays the BASEFEE for each block.
-- Helps visualize the gas price dynamics introduced by EIP-1559.
+All charts are synchronized and update in real-time as new blocks are mined, with an initial lookback of 10 blocks when the page loads.
 
-3. **Gas Usage Ratio Chart**
+## Technology Stack
 
-- Shows the ratio of gasUsed over gasLimit as a percentage.
-- Helps understand network congestion and gas price correlations.
+- **Frontend**: HTML, CSS, TypeScript
+- **Blockchain Integration**: Alchemy SDK
+- **Data Visualization**: ApexCharts
+- **Build Tool**: Parcel
 
-All charts use a lookback of 10 blocks to provide initial data when the page loads.
+## Getting Started
 
-## How to Run
+### Prerequisites
 
-1Set up your environment variables:
-Create a `.env` file in the project root, similar to `.envexample`, and add your Alchemy API key:
+- Node.js (v20 or higher)
+- npm or pnpm
+- An Alchemy API key ([Get one here](https://www.alchemy.com/))
 
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/eth-analyser.git
+   cd eth-analyser
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or if using pnpm
+   pnpm install
+   ```
+
+3. Set up your environment variables:
+   Create a `.env` file in the project root and add your Alchemy API key:
    ```
    ALCHEMY_API_KEY=your_api_key_here
    ```
 
-2Run the development server:
+### Development
 
-   ```
-   npm run dev
-   ```
+Run the development server:
+```bash
+npm run dev
+```
 
-5. Open your browser and navigate to `http://localhost:1234` (or the port specified by Parcel).
+Open your browser and navigate to `http://localhost:1234`
+
+### Production Build
+
+Create an optimized production build:
+```bash
+npm run build
+```
+
+The output will be in the `dist` directory.
+
+### Deployment
+
+This project is configured for deployment on Vercel:
+
+1. Push your code to a GitHub repository
+2. Connect your repository to Vercel
+3. Vercel will automatically deploy your application using the configuration in `vercel.json`
+
+You can also deploy manually using the Vercel CLI:
+```bash
+vercel
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the ISC License - see the LICENSE file for details.
