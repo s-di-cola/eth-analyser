@@ -3,7 +3,7 @@ import { Utils } from "alchemy-sdk";
 import {
   fetchTotalTransferVolumeForRecentBlocks,
   listenForNewTransactions,
-} from "./usdt-tx.js";
+} from "./usdt-tx";
 
 // Loading state management
 function showLoading() {
