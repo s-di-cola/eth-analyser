@@ -1,7 +1,6 @@
 {
   "buildCommand": "parcel build index.html",
   "outputDirectory": "dist",
-  "framework": "custom",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
