@@ -6,10 +6,9 @@ import "dotenv/config";
 const TRANSFER_TOPIC = keccak256(
   toUtf8Bytes("Transfer(address,address,uint256)"),
 );
-// Get API key from environment variable, with fallback for development
-const ALCHEMY_KEY = process.env.ALCHEMY_API_KEY || process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
+const ALCHEMY_KEY = process.env.ALCHEMY_API_KEY;
 const USDT_CONTRACT = "0xdac17f958d2ee523a2206206994597c13d831ec7";
-
+debugger;
 const settings = {
   apiKey: ALCHEMY_KEY,
   network: Network.ETH_MAINNET,
@@ -30,6 +29,7 @@ const alchemy = new Alchemy(settings);
 async function getTotalVolumeOfTransfers(
   blockNumber: number,
 ): Promise<BlockTransaction> {
+  console.log("Getting transactions for block:", blockNumber);
   const block = await alchemy.core.getBlockWithTransactions(blockNumber);
   const transactions = await alchemy.core.getLogs({
     fromBlock: block.number,
